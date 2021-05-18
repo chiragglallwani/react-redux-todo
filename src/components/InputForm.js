@@ -35,8 +35,8 @@ class InputForm extends React.Component {
 
     handleSubmit = (inputValues) => {
         this.props.addTodo(inputValues);
-        inputValues.todo_input = null;
-        inputValues.todo_date = null;
+        inputValues.todo_input = '';
+        inputValues.todo_date = '';
     }
     render() {
         return (
