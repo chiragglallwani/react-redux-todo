@@ -35,8 +35,11 @@ class InputForm extends React.Component {
 
     handleSubmit = (inputValues, dispatch) => {
         this.props.addTodo(inputValues);
+<<<<<<< HEAD
         //form is reset
         dispatch(reset('todo-input'));
+=======
+>>>>>>> 6c43f4ccd4f5ce09144275903cdb21232f06edf6
     }
     render() {
         return (
