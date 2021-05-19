@@ -1,7 +1,7 @@
 import React from 'react'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap'
 import { connect } from 'react-redux';
-import { Field, reduxForm } from 'redux-form';
+import { Field, reduxForm, reset } from 'redux-form';
 import {addTodo } from '../actions'
 
 
@@ -33,8 +33,12 @@ class InputForm extends React.Component {
         );
     };
 
-    handleSubmit = (inputValues) => {
+    handleSubmit = (inputValues, dispatch) => {
         this.props.addTodo(inputValues);
+
+        //form is reset
+        dispatch(reset('todo-input'));
+
     }
     render() {
         return (
